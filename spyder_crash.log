@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/spyder/app/mainwindow.py", line 2999, in main
+    mainwindow = run_spyder(app, options, args)
+  File "/usr/lib/python3/dist-packages/spyder/app/mainwindow.py", line 2901, in run_spyder
+    main.setup()
+  File "/usr/lib/python3/dist-packages/spyder/app/mainwindow.py", line 1029, in setup
+    for mod in get_spyderplugins_mods():
+  File "/usr/lib/python3/dist-packages/spyder/otherplugins.py", line 42, in get_spyderplugins_mods
+    _get_spyderplugins(plugin_path, io, modnames, modlist)
+  File "/usr/lib/python3/dist-packages/spyder/otherplugins.py", line 58, in _get_spyderplugins
+    _import_plugin(name, plugin_path, modnames, modlist)
+  File "/usr/lib/python3/dist-packages/spyder/otherplugins.py", line 75, in _import_plugin
+    module = _import_module_from_path(module_name, plugin_path)
+  File "/usr/lib/python3/dist-packages/spyder/otherplugins.py", line 111, in _import_module_from_path
+    module = spec.loader.load_module(module_name)
+  File "<frozen importlib._bootstrap_external>", line 396, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 817, in load_module
+  File "<frozen importlib._bootstrap_external>", line 676, in load_module
+  File "<frozen importlib._bootstrap>", line 265, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 626, in _exec
+  File "<frozen importlib._bootstrap_external>", line 673, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/usr/lib/python3/dist-packages/spyder_pylint/__init__.py", line 6, in <module>
+    from .pylint import Pylint as PLUGIN_CLASS
+  File "/usr/lib/python3/dist-packages/spyder_pylint/pylint.py", line 27, in <module>
+    from .widgets.pylintgui import (PYLINT_PATH, PylintWidget)
+  File "/usr/lib/python3/dist-packages/spyder_pylint/widgets/pylintgui.py", line 82, in <module>
+    PYLINT_VER = get_pylint_version()
+  File "/usr/lib/python3/dist-packages/spyder_pylint/widgets/pylintgui.py", line 73, in get_pylint_version
+    lines = to_unicode_from_fs(process.stdout.read()).splitlines()
+KeyboardInterrupt
